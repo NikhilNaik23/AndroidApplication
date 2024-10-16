@@ -10,6 +10,11 @@ import androidx.core.view.WindowInsetsCompat
 
 class Calculator : AppCompatActivity() {
 
+    private var firstNumber: Double = 0.0
+    private var secondNumber: Double = 0.0
+    private var operator: String = ""
+    private var isOperatorPressed: Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -38,6 +43,43 @@ class Calculator : AppCompatActivity() {
         val divisonButton = findViewById<Button>(R.id.button19)
         val equalsButton = findViewById<Button>(R.id.button20)
 
+        // Set number button listeners
+        for (button in numberButtons) {
+            button.setOnClickListener {
+                val number = (it as Button).text.toString()
+                if (isOperatorPressed) {
+                    txtvw.text = number
+                    isOperatorPressed = false
+                } else {
+                    txtvw.append(number)
+                }
+            }
+        }
 
+        // Operator button listeners
+        addButton.setOnClickListener { handleOperator("+", txtvw) }
+        subtractButton.setOnClickListener { handleOperator("-", txtvw) }
+        multiplyButton.setOnClickListener { handleOperator("*", txtvw) }
+        divisonButton.setOnClickListener { handleOperator("/", txtvw) }
+
+        // Equals button listener
+        equalsButton.setOnClickListener {
+            secondNumber = txtvw.text.toString().toDouble()
+            val result = when (operator) {
+                "+" -> firstNumber + secondNumber
+                "-" -> firstNumber - secondNumber
+                "*" -> firstNumber * secondNumber
+                "/" -> if (secondNumber != 0.0) firstNumber / secondNumber else "Error"
+                else -> 0.0
+            }
+            txtvw.text = result.toString()
+        }
+
+    }
+
+    private fun handleOperator(op: String, txtvw: TextView) {
+        firstNumber = txtvw.text.toString().toDouble()
+        operator = op
+        isOperatorPressed = true
     }
 }
