@@ -13,22 +13,16 @@
         android:theme="@style/Theme.Project2"
         tools:targetApi="31">
         <activity
-            android:name=".Skills"
-            android:exported="false" />
+            android:name=".WelcomeActivity"
+            android:exported="true" />
         <activity
-            android:name=".Projects"
-            android:exported="false" />
+            android:name=".CA_II"
+            android:exported="true" />
         <activity
-            android:name=".Hobbies"
-            android:exported="false" />
+            android:name=".Portfolio.Feedback"
+            android:exported="true" />
         <activity
-            android:name=".Certifications"
-            android:exported="false" />
-        <activity
-            android:name=".Portfolio_nextPage"
-            android:exported="false" />
-        <activity
-            android:name=".Portfolio"
+            android:name=".Portfolio.HomePage"
             android:exported="true" />
         <activity
             android:name=".MenuBar"
@@ -99,6 +93,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
