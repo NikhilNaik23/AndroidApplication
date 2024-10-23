@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".checkBoxShare">
+
+    <CheckBox
+        android:id="@+id/quote1"
+        android:layout_width="341dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="92dp"
+        android:text="That's one small step for a man, a giant leap for mankind."
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/quote2"
+        android:layout_width="341dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="104dp"
+        android:text="The love of money is the root of all evil."
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/quote1" />
+
+    <CheckBox
+        android:id="@+id/quote3"
+        android:layout_width="341dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="112dp"
+        android:text="The truth will set you free."
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/quote2" />
+
+    <CheckBox
+        android:id="@+id/quote4"
+        android:layout_width="341dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="120dp"
+        android:text="All that glitters is not gold."
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/quote3" />
+
+    <CheckBox
+        android:id="@+id/quote5"
+        android:layout_width="341dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="112dp"
+        android:text="A rose by any other name would smell as sweet."
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/quote4" />
+
+    <Button
+        android:id="@+id/shareBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Share"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quote5"
+        app:layout_constraintVertical_bias="0.013" />
+</androidx.constraintlayout.widget.ConstraintLayout>
