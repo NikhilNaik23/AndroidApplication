@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/gridLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:rowCount="3"
+    android:layout_weight="1"
+    android:padding="16dp">
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/img_54"
+        android:contentDescription="Image Button 1"
+        android:layout_gravity="center"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:onClick="onImageButtonClick"/>
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/img_54"
+        android:contentDescription="Image Button 2"
+        android:layout_gravity="center"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:onClick="onImageButtonClick"/>
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/img_54"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:contentDescription="Image Button 3"
+        android:layout_gravity="center"
+        android:onClick="onImageButtonClick"/>
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/img_54"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:contentDescription="Image Button 4"
+        android:layout_gravity="center"
+        android:onClick="onImageButtonClick"/>
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/img_54"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:contentDescription="Image Button 5"
+        android:layout_gravity="center"
+        android:onClick="onImageButtonClick"/>
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/img_54"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:contentDescription="Image Button 6"
+        android:layout_gravity="center"
+        android:onClick="onImageButtonClick"/>
+</GridLayout>

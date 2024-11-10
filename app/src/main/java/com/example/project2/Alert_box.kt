@@ -17,18 +17,26 @@ class Alert_box : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_alert_box)
-        val btn=findViewById<Button>(R.id.button22)
+        val btn = findViewById<Button>(R.id.button22)
         btn.setOnClickListener {
-            var b=AlertDialog.Builder(this)
+            var b = AlertDialog.Builder(this)
             b.setTitle("Rate Now")
             b.setMessage("Feedback time")
             b.setCancelable(false) //dialog box will not be cancelled, if we click on screen anywhere.
-            b.setPositiveButton("Yes"){dialog,_->
-                var i= Intent(this,RatingBar::class.java)
-                startActivity(i)
+            b.setPositiveButton("Yes") { dialog, _ ->
+//                var i = Intent(this, Rating_bar::class.java)
+//                startActivity(i)
+                finish()
+
             }
-            b.setNegativeButton("No"){dialog,_->dialog.dismiss()}
-            b.setNeutralButton("Maybe Later"){dialog,_-> Toast.makeText(this,"Ok later",Toast.LENGTH_LONG).show()}
+            b.setNegativeButton("No") { dialog, _ -> dialog.dismiss() }
+            b.setNeutralButton("Maybe Later") { dialog, _ ->
+                Toast.makeText(
+                    this,
+                    "Ok later",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
             b.create().show()
         }
     }

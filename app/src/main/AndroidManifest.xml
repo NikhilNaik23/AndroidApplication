@@ -19,6 +19,30 @@
         android:theme="@style/Theme.Project2"
         tools:targetApi="31">
         <activity
+            android:name=".Portfolio.Hobbies"
+            android:exported="false" />
+        <activity
+            android:name=".Portfolio.Gallery"
+            android:exported="false" />
+        <activity
+            android:name=".Portfolio.Projects"
+            android:exported="false" />
+        <activity
+            android:name=".Portfolio.Skills"
+            android:exported="false" />
+        <activity
+            android:name=".Portfolio.Certifications"
+            android:exported="false" />
+        <activity
+            android:name=".Portfolio.Academics"
+            android:exported="false" />
+        <activity
+            android:name=".Practice1.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DialogBox"
+            android:exported="true" />
+        <activity
             android:name=".Rating_bar"
             android:exported="true" />
         <activity

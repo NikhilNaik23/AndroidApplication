@@ -23,4 +23,8 @@
         app:showAsAction="collapseActionView"
         android:icon="@drawable/img_46"
         />
+    <item
+        android:id="@+id/exit"
+        android:title="Exit"
+        app:showAsAction="always"/>
 </menu>
