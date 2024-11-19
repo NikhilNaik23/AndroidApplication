@@ -1,12 +1,16 @@
 package com.example.project2.Portfolio
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuInflater
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.PopupMenu
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -14,9 +18,11 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.net.toUri
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.project2.PopUpMenu
 import com.example.project2.R
 
 class HomePage : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -54,6 +60,39 @@ class HomePage : AppCompatActivity() {
         hobbies.setOnClickListener {
             val i =Intent(this,Hobbies::class.java)
             startActivity(i)
+        }
+
+        var btn=findViewById<Button>(R.id.btn)
+        btn.setOnClickListener {
+            val n=PopupMenu(this,btn)
+            val m:MenuInflater=n.menuInflater
+            m.inflate(R.menu.portfolio_popup_menu,n.menu)
+            n.setOnMenuItemClickListener { item:MenuItem->
+                when(item.itemId){
+                    R.id.acad->{
+                        val i =Intent(this,Academics::class.java)
+                        startActivity(i)
+                        true
+                    }
+                    R.id.cert->{
+                        val i =Intent(this,Certifications::class.java)
+                        startActivity(i)
+                        true
+                    }
+                    R.id.proj->{
+                        val i =Intent(this,Projects::class.java)
+                        startActivity(i)
+                        true
+                    }
+                    R.id.feed->{
+                        val i=Intent(this,Feedback::class.java)
+                        startActivity(i)
+                        true
+                    }
+                    else->false
+                }
+            }
+            n.show()
         }
     }
 
@@ -99,4 +138,5 @@ class HomePage : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
 }

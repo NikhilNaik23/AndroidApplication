@@ -34,7 +34,7 @@ class PopUpMenu : AppCompatActivity() {
                         Toast.makeText(this,"deleted",Toast.LENGTH_SHORT).show()
                         true
                     }
-                    else->super.onContextItemSelected(item)
+                    else->false
                 }
             }
             n.show()

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/acad"
+        android:title="Academics"/>
+    <item
+        android:id="@+id/cert"
+        android:title="Certifications"/>
+    <item
+        android:id="@+id/proj"
+        android:title="Projects"/>
+    <item
+        android:id="@+id/feed"
+        android:title="Feedback"/>
+</menu>
