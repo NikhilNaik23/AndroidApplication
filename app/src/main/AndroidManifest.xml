@@ -19,6 +19,12 @@
         android:theme="@style/Theme.Project2"
         tools:targetApi="31">
         <activity
+            android:name=".Permissions1"
+            android:exported="true" />
+        <activity
+            android:name=".AppLocalization1"
+            android:exported="true" />
+        <activity
             android:name=".E_learning.login_page"
             android:exported="false" />
         <activity

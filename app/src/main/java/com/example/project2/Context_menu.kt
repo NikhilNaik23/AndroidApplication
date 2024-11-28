@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.graphics.Color
 import android.os.Bundle
 import android.view.ContextMenu
+import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
@@ -34,6 +35,7 @@ class Context_menu : AppCompatActivity() {
         val j2:MenuInflater=menuInflater
         j2.inflate(R.menu.context_menu, menu)
     }
+
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
         val j3=findViewById<LinearLayout>(R.id.box)
