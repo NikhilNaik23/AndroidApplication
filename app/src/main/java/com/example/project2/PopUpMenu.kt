@@ -22,8 +22,7 @@ class PopUpMenu : AppCompatActivity() {
         val btn=findViewById<Button>(R.id.button)
         btn.setOnClickListener {
             var n= PopupMenu(this,btn)
-            val m: MenuInflater =n.menuInflater
-            m.inflate(R.menu.popupmenulayout,n.menu)
+            val m = menuInflater.inflate(R.menu.popupmenulayout,n.menu)
             n.setOnMenuItemClickListener { item:MenuItem->
                 when(item.itemId){
                     R.id.share->{

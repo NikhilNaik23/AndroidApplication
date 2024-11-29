@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Practice2.Activity_1"
+    android:gravity="center">
+
+    <EditText
+        android:id="@+id/edt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Your Name: "
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt1"
+        android:hint="Enter Phone Number"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="20dp"
+        android:id="@+id/edt2"
+        android:inputType="number"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt2"
+        android:id="@+id/btn"
+        android:text="Call"
+        android:layout_margin="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        />
+</RelativeLayout>

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">project2</string>
     <string name="vision">Empower Education</string>
+    <string name="txt">Welcome</string>
 </resources>

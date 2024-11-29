@@ -20,14 +20,16 @@ class AppChooser : AppCompatActivity() {
             shareTxt("Hello, Share this message")
         }
     }
-    fun shareTxt(txt:String)
-    {
-        val send:Intent =Intent().apply {
-            action=Intent.ACTION_SEND
-            putExtra(Intent.EXTRA_TEXT,txt)
-            type="text/plain"
+    fun shareTxt(txt: String) {
+        val title = "Share via"
+        val send = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, txt)
+            putExtra(Intent.EXTRA_TITLE, title)
+            type = "text/plain"
         }
-        val chooser=Intent.createChooser(send,"Share via")
+        val chooser = Intent.createChooser(send,title)
         startActivity(chooser)
     }
+
 }

@@ -32,8 +32,7 @@ class Context_menu : AppCompatActivity() {
         menuInfo: ContextMenu.ContextMenuInfo?
     ) {
         super.onCreateContextMenu(menu, v, menuInfo)
-        val j2:MenuInflater=menuInflater
-        j2.inflate(R.menu.context_menu, menu)
+        val j2 = menuInflater.inflate(R.menu.context_menu,menu)
     }
 
 
